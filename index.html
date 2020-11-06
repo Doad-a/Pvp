@@ -1,0 +1,6348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="JS/index.js"></script>
+	<script type="text/javascript" src="JS/paihangbang.js">
+	</script>
+	<title>王者荣耀官方网站—腾讯游戏</title>
+	<link rel="stylesheet" type="text/css" href="CSS/index.css" />
+	<style>
+		/* ipai */
+		/* @media screen and (max-width:779px) and (min-width:600px) {
+			body{
+				width: 1240px;
+			}
+			#top-all{
+				width:1200px;
+			}
+			#top_bj{
+				width:1200px !important;
+			}
+			#header{
+				width:1200px;
+			}
+		} */
+
+		/* 手机 */
+		@media screen and (max-width:1200px) {
+			body {
+				width: 1200px;
+			}
+
+			#top-all {
+				width: 1200px;
+			}
+
+			#top_bj {
+				width: 1200px !important;
+			}
+
+			#header {
+				width: 1200px;
+			}
+		}
+
+		#fix {
+			position: fixed;
+			top: 150px;
+			right: 0px;
+			width: 87px;
+			height: 291px;
+			background-image: url(images/dl_bg_4e42051.png);
+			/* border: 1px red solid; */
+		}
+
+		.btn_fix {
+			display: block;
+			color: white;
+			font-size: 18px;
+			width: 50px;
+			height: 108px;
+			margin-left: 40px;
+			text-align: center;
+			padding-top: 15px;
+			/* border: 1px #87CEEB solid; */
+		}
+
+		.fix_img {
+			display: block;
+			width: 21px;
+			height: 21px;
+			background-image: url(images/packup_c5e548f.png);
+			transform: rotate(180deg);
+			margin: 0 auto;
+			/* border: 1px red solid; */
+		}
+
+		#open_down {
+			display: none;
+			/* border: 1px #87CEEB solid; */
+		}
+
+		#XiaoGuai {
+			position: absolute;
+			width: 165px;
+			left: 0;
+			top: 260px;
+			z-index: 9999;
+			/* overflow: hidden; */
+
+		}
+
+		#XiaoGuai_All {
+			position: relative;
+		}
+
+		.Go {
+			/* overflow: hidden; */
+			background-repeat: no-repeat;
+			animation: XiaoGuai 0.3s steps(2, start) infinite;
+		}
+
+		@keyframes XiaoGuai {
+			0% {
+				background-position: 0 0;
+			}
+
+			100% {
+				background-position: 200% 0;
+			}
+		}
+
+		#XiaoGuai2 {
+			width: 167px;
+			height: 176px;
+			background: url(images/txgh_fee2457.png);
+		}
+
+		#GuaiWu_Tip {
+			position: absolute;
+			top: -145px;
+			width: 100%;
+			height: 145px;
+			background: url(images/r_dj.png);
+			/* position: relative; */
+		}
+
+		#GuaiWu_Tip span {
+			display: block;
+			position: absolute;
+			top: 32px;
+			left: 8px;
+			width: 88px;
+			height: 36px;
+			font-size: 14px;
+			text-indent: 14px;
+			font-weight: bold;
+			line-height: 18px;
+			color: #62401b;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 小怪物 -->
+	<div id="XiaoGuai">
+		<div id="XiaoGuai_All">
+			<div id="GuaiWu_Tip" style="display:none;">
+				<span>
+					可以拖动哦
+				</span>
+			</div>
+			<div id="XiaoGuai2" class="Go">
+			</div>
+		</div>
+	</div>
+	<div id="fix">
+		<a href="javascript:0" id="open_show" class="btn_fix">
+			<span class="fix_img"></span>
+			展<br />
+			开
+		</a>
+		<a href="javascript:0" id="open_down" class="btn_fix">
+			<span class="fix_img"></span>
+			收<br />
+			起
+		</a>
+	</div>
+	<script>
+		// 展开
+		$("#open_show").click(function () {
+			$("#fix").css("transition-duration", "800ms")
+			$("#fix").css("width", "240px")
+			$("#open_show").css("display", "none")
+			$("#open_down").css("display", "block")
+			$("#open_down").children("span").css("transform", "none")
+		})
+		// 收起
+		$("#open_down").click(function () {
+			$("#fix").css("width", "87px")
+			$("#open_show").css("display", "block")
+			$("#open_down").css("display", "none")
+		})
+	</script>
+	<div id="r_fixed">
+		<div id="r_dj">
+			<span>下载王者营地每天领福利</span>
+		</div>
+		<ul>
+			<li class="r_code">
+				<img src="images/r_code.jpg" width="110" height="111" class="r_pic">
+			</li>
+			<li class="r_weibo r_css">
+				<a href="#"></a>
+			</li>
+			<li class="r_gzh r_css">
+				<div>
+					<img src="images/gzh_code.jpg" class="r_pic">
+					<p>
+						扫码<span>关注官方公众号</span>
+						<br>
+						获取<span>最新资讯及好礼</span>
+					</p>
+				</div>
+			</li>
+			<li class="r_sfz r_css">
+				<a href="#"></a>
+				<div>
+					<img src="images/code_2.png" width="101" height="111" class="r_pic">
+					<p>扫码查看你的专属身份</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div id="action_bottom">
+		<a href="#"><img src="images/hudongying.png"></a>
+	</div>
+	<div id="top-all">
+		<div id="top_bj"></div>
+		<div id="top">
+			<div id="nav">
+				<div id="nav-1">
+					<div id="logopng"><img src="images/logo.png"></div>
+					<ul>
+						<li><a href="index.html">官网首页<em class="top_tips">HOME</em></a></li>
+						<li><a href="herolist.html">游戏资料<em class="top_tips">DATA</em></a></li>
+						<li><a href="#">内容中心<em class="top_tips">CONTENTS</em></a></li>
+						<li><a href="#">赛事中心<em class="top_tips">MATCH</em></a></li>
+						<li><a href="#">百态王者<em class="top_tips">CULTURE</em></a></li>
+						<li><a href="#">社区活动<em class="top_tips">COMMUNITY</em></a></li>
+						<li><a href="#">玩家支持<em class="top_tips">PLAYER</em></a></li>
+					</ul>
+					<div id="login">
+						<a href="" style="height: 100px;"><img src="images/下载.png"></a>
+						<div id="login-user">
+							<span><a href="">欢迎登录</a></span>
+							<p>登录游戏后查看战绩</p>
+						</div>
+					</div>
+				</div>
+				<div id="nav-2">
+					<div id="ul-inner">
+						<ul>
+							<li>&nbsp;</li>
+							<li>
+								<a href="#">版本介绍</a>
+								<a href="#">游戏介绍</a>
+								<a href="#">英雄资料</a>
+								<a href="#"><i class="li_bg"></i>爆料站</a>
+								<a href="#"><i class="li_bg"></i>故事站</a>
+								<a href="#">游戏壁纸</a>
+								<a href="#"><i class="li_bg"></i>模拟战资料库</a>
+							</li>
+							<li>
+								<a href="#">攻略中心</a>
+								<a href="#">英雄攻略</a>
+								<a href="#">视频中心</a>
+								<a href="#"><i class="li_bg"></i>开放素材库</a>
+								<a href="#"><i class="li_bg"></i>王者视角</a>
+								<a href="#"><i class="li_bg"></i>作者入驻</a>
+								<a href="#">媒体入驻</a>
+							</li>
+							<li>
+								<a href="#">冬季冠军杯</a>
+								<a href="#">KPL</a>
+								<a href="#"><i class="li_bg"></i>模拟战冬冠</a>
+								<a href="#">KPLGT</a>
+								<a href="#">高校赛</a>
+								<a href="#">城市赛</a>
+								<a href="#">全民赛</a>
+								<a href="#"><i class="li_bg"></i>赛事数据</a>
+							</li>
+							<li>
+								<a href="#">荣耀·传承</a>
+								<a href="#">王者文化站</a>
+								<a href="#">王者音乐听</a>
+								<a href="#">万千世界</a>
+								<a href="#">星光殿堂</a>
+								<a href="#">商户特权</a>
+								<a href="#"><i class="li_bg"></i>无限王者团</a>
+							</li>
+							<li>
+								<a href="#"><i class="li_bg"></i>创意互动营</a>
+								<a href="#"><i class="li_bg3"></i>王者营地</a>
+								<a href="#">手Q部落</a>
+								<a href="#">微信圈子</a>
+								<a href="#">官方微博</a>
+								<a href="#">微信公众号</a>
+								<a href="#">手Q订阅号</a>
+								<a href="#">同人社区</a>
+							</li>
+							<li>
+								<a href="#"><i class="li_bg2"></i>成长守护平台</a>
+								<a href="#"><i class="li_bg1"></i>健康系统</a>
+								<a href="#"><i class="li_bg"></i>对局环境情报站</a>
+								<a href="#">客服专区</a>
+								<a href="#">礼包兑换</a>
+								<a href="#">自助服务</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="a_asik">
+			<a href="coming.html" title="查看详情"></a>
+		</div>
+		<div id="center">
+			<div id="center_top-left">
+				<div id="left-top">
+					<ul style="width: 3020px;">
+						<li><a href=""><img src="images/5f2335f3448e946cf26d85a2fadf2d98.png"></a></li>
+						<li><a href=""><img src="images/57910e4128629e29dae63e0cc4bed5c5.jpeg"></a></li>
+						<li><a href=""><img src="images/180630804746004d4f7938c59b37d489.jpeg"></a></li>
+						<li><a href=""><img src="images/e14f4eaa46220b9402e104ab21a23e8d.jpeg"></a></li>
+						<li><a href=""><img src="images/4c6180735ff46a4f8a6853d6fb1c562f.jpeg"></a></li>
+					</ul>
+				</div>
+				<div id="left-bottom">
+					<span class="rt" style="background-color: rgba(255,255,255,0.15);color: #f3c258;">大乔白蛇皮肤上架</span>
+					<span class="rt">狄某有话说</span>
+					<span class="rt">巅峰王者会</span>
+					<span class="rt">虎扑测评</span>
+					<span class="rt">快手女神挑战赛</span>
+				</div>
+			</div>
+			<div id="center-top-center">
+				<div id="center-auto">
+					<div id="center-ul" style=" height: 55px;border-bottom: 1px #000000 solid;overflow: hidden;">
+						<ul style="float: left;">
+							<li class="border-center center-asik"><a href="" style="color: #f3c258;">热门</a></li>
+							<li><a href="#">新闻</a></li>
+							<li><a href="#">公告</a></li>
+							<li><a href="#">活动</a></li>
+							<li><a href="#">赛事</a></li>
+						</ul>
+						<a href="" title="更多"
+							style="float: left; display: block;width: 52px; height: 45px; color: #B1B2BE; line-height: 40px; text-align: center;">...</a>
+					</div>
+					<div id="center-bottom-show">
+						<div id="center-bottom">
+							<ul>
+								<li class="line-sp">
+									<a href="">3月13日全服不停机更新公告</a>
+								</li>
+								<li>
+									<a href="">【英雄修炼】活动问题修复及优化补偿方案公告</a>
+									<em class="fr news-time">03/11</em>
+								</li>
+								<li>
+									<a href="">3月10日全服不停机更新公告</a>
+									<em class="fr news-time">03/10</em>
+								</li>
+								<li>
+									<a href="">白色情人节 浪漫好礼来袭</a>
+									<em class="fr news-time">03/10</em>
+								</li>
+								<li>
+									<a href="">3月13日体验服不停机更新公告</a>
+									<em class="fr news-time">03/13</em>
+								</li>
+								<li>
+									<a href="">【体验服】王者模拟战模式暂时关闭调优公告</a>
+									<em class="fr news-time">03/13</em>
+								</li>
+								<li>
+									<a href="">3月13日体验服停机更新公告</a>
+									<em class="fr news-time">03/13</em>
+								</li>
+								<li>
+									<a href="">心愿单功能异常说明</a>
+									<em class="fr news-time">03/12</em>
+								</li>
+							</ul>
+							<ul>
+								<li class="line-sp">
+									<a href="">体验服爆料丨拒绝被抢野，loading能打气，峡谷调整抢先知</a>
+								</li>
+								<li>
+									<a href="">全新限时活动玩法【万镜觉醒】3.13开启，五倍快乐等你来~</a>
+									<em class="fr news-time">03/12</em>
+								</li>
+								<li>
+									<a href="">王者音乐课：五岳山河志</a>
+									<em class="fr news-time">03/10</em>
+								</li>
+								<li>
+									<a href="">【虎牙大腿杯S3】玩法升级，火热开战！</a>
+									<em class="fr news-time">03/07</em>
+								</li>
+								<li>
+									<a href="">体验服爆料丨全新玩法万镜觉醒，爽快翻5倍！</a>
+									<em class="fr news-time">03/06</em>
+								</li>
+								<li>
+									<a href="">新皮肤爆料丨白蛇再临西子湖畔，只为赴你千年之约！</a>
+									<em class="fr news-time">03/02</em>
+								</li>
+								<li>
+									<a href="">新星元部件爆料丨渐变马尾&amp;白金战服！伽罗换装出击~</a>
+									<em class="fr news-time">02/24</em>
+								</li>
+								<li>
+									<a href="">体验服爆料丨穿上新盔甲，守护玄雍城！白起优化曝光</a>
+									<em class="fr news-time">02/14</em>
+								</li>
+							</ul>
+							<ul>
+								<li class="line-sp">
+									<a href="">3月13日体验服不停机更新公告</a>
+								</li>
+								<li>
+									<a href="">【体验服】王者模拟战模式暂时关闭调优公告</a>
+									<em class="fr news-time">03/13</em>
+								</li>
+								<li>
+									<a href="">3月13日体验服停机更新公告</a>
+									<em class="fr news-time">03/13</em>
+								</li>
+								<li>
+									<a href="">心愿单功能异常说明</a>
+									<em class="fr news-time">03/12</em>
+								</li>
+								<li>
+									<a href="">3月13日全服不停机更新公告</a>
+									<em class="fr news-time">03/12</em>
+								</li>
+								<li>
+									<a href="">【已修复】英雄修炼活动页面显示异常说明</a>
+									<em class="fr news-time">03/12</em>
+								</li>
+								<li>
+									<a href="">【英雄修炼】活动问题修复及优化补偿方案公告</a>
+									<em class="fr news-time">03/11</em>
+								</li>
+								<li>
+									<a href="">3月11日全服不停机更新公告</a>
+									<em class="fr news-time">03/11</em>
+								</li>
+							</ul>
+							<ul>
+								<li class="line-sp">
+									<a href="">白色情人节【玫瑰芬芳，纸短情长】活动公告</a>
+								</li>
+								<li>
+									<a href="">白色情人节 浪漫好礼来袭</a>
+									<em class="fr news-time">03/10</em>
+								</li>
+								<li>
+									<a href="">峡谷女神节 福利大集结</a>
+									<em class="fr news-time">03/02</em>
+								</li>
+								<li>
+									<a>【稷下修学游】活动公告</a>
+									<em class="fr news-time">02/28</em>
+								</li>
+								<li>
+									<a href="">伽罗星元上新 多重福利来袭</a>
+									<em class="fr news-time">02/24</em>
+								</li>
+								<li>
+									<a>峡谷来相聚 初春有好礼</a>
+									<em class="fr news-time">02/17</em>
+								</li>
+								<li>
+									<a href="">创意互动营-云中君皮肤设计大赛投票开启</a>
+									<em class="fr news-time">02/13</em>
+								</li>
+								<li>
+									<a href="">爱在峡谷携手度 甜蜜好礼轻松得</a>
+									<em class="fr news-time">02/11</em>
+								</li>
+							</ul>
+							<ul>
+								<li class="line-sp">
+									<a href="">王者荣耀国际巡回赛（KPLGT）2020年春季赛开赛时间公告</a>
+								</li>
+								<li>
+									<a href="">2020年KPL春季赛大名单公布</a>
+									<em class="fr news-time">03/09</em>
+								</li>
+								<li>
+									<a href="">2020年KPL春季赛“云开赛”在即 全新视觉与六大城市主场来袭！</a>
+									<em class="fr news-time">03/08</em>
+								</li>
+								<li>
+									<a>高校联赛女神挑战赛周末开赛啦！来看高颜值组合强强联手</a>
+									<em class="fr news-time">03/06</em>
+								</li>
+								<li>
+									<a href="">你和那个TA会是峡谷校园最佳CP吗？高校联赛白色情人节开启CP大作战！</a>
+									<em class="fr news-time">03/05</em>
+								</li>
+								<li>
+									<a href="">王者荣耀大众赛事将迎来全面升级</a>
+									<em class="fr news-time">03/04</em>
+								</li>
+								<li>
+									<a href="">赛事体验全面升级，重大改版细节抢先看</a>
+									<em class="fr news-time">03/03</em>
+								</li>
+								<li>
+									<a href="">2020年KPL春季赛常规赛赛程公布</a>
+									<em class="fr news-time">03/02</em>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="conter-top-right">
+				<div id="conter-right1">
+					<a href="#" title="下载游戏" class="content-right_a"></a>
+				</div>
+				<div id="conter-right2">
+					<a href="#" title="体验专区" class="content-right_a"></a>
+				</div>
+				<div id="conter-right3">
+					<a href="#" title="对局环境" class="content-right_a"></a>
+				</div>
+			</div>
+		</div>
+		<div id="bottom">
+			<a href="#" title="官方爆料" class="next_asik" style="margin-left: 0px;"><img src="images/baoliao.jpg"></a>
+			<a href="#" title="王者营地" class="next_asik"><img src="images/yingdi.jpg"></a>
+			<a href="#" title="荣耀 传承" class="next_asik"><img src="images/chuancheng.jpg"></a>
+			<a href="#" title="KPL" class="next_asik" style="margin-right: 0px;"><img src="images/KPL.jpg"></a>
+		</div>
+	</div>
+	<!-- 上边部分结束 -->
+	<!-- 内容部分开始 -->
+	<div id="main" style="overflow: hidden;margin-bottom: 80px;">
+		<div id="main_top" style="margin-bottom: 28px;overflow: hidden;">
+			<div id="main_left">
+				<div id="main_title">
+					<h3 class="mtitle_h3">内容中心</h3>
+					<a href="#" class="mtitle_a">
+						<span class="more"></span>更多
+					</a>
+				</div>
+				<div id="main_lanmu-top">
+					<a href="#" style="color:#000000;border-bottom:3px #f3c258 solid;" class="main_a">精品栏目</a><span
+						class="main_span"></span>
+					<a href="#" class="main_a">赛事精品</a><span class="main_span"></span>
+					<a href="#" class="main_a">英雄攻略</a>
+				</div>
+				<div id="main_lanmu_content">
+					<div id="lanmu_content1" style="display: black;">
+						<div class="lanmu_title" id="lanmu_cont1">
+							<a href="#" class=" content_a"
+								style="border-color: #f3c258;background: #f3c258;color: #fff;">最新</a>
+							<a href="#" class=" content_a">王者克制论</a>
+							<a href="#" class=" content_a">王者视角</a>
+							<a href="#" class=" content_a">峡谷情报局</a>
+							<a href="#" class=" content_a">国服观影路</a>
+							<a href="#" class=" content_a">百星王者带你飞</a>
+							<a href="#" class=" content_a">寒夜教练视角</a>
+							<a href="#" class=" content_a">棋高一招</a>
+						</div>
+					</div>
+					<div></div>
+					<div id="lanmu_content2" style="display: none;">
+						<div class="lanmu_title" id="lanmu_cont2">
+							<a href="#" class=" content_a"
+								style="border-color: #f3c258;background: #f3c258;color: #fff;">王者炸麦了</a>
+							<a href="#" class=" content_a">KPL观赛指南</a>
+							<a href="#" class=" content_a">荣耀进行时</a>
+							<a href="#" class=" content_a">大葱哥聊KPL</a>
+							<a href="#" class=" content_a">王者职业教学</a>
+							<a href="#" class=" content_a">QG荣耀学院</a>
+							<a href="#" class=" content_a">QG我来carry</a>
+						</div>
+					</div>
+					<div></div>
+					<div id="lanmu_content3" style="display: none; position: relative;">
+						<div class="lanmu_title" id="lanmu_cont3">
+							<span id="xuanzeyingxiong">选择英雄</span>
+						</div>
+						<div id="lanmu_content3_content">
+							<div id="lanmu_content3_ul" class="fl">
+								<ul>
+									<li class="hero yingxiong">热门</li>
+									<li class="hero">坦克</li>
+									<li class="hero">战士</li>
+									<li class="hero">刺客</li>
+									<li class="hero">法师</li>
+									<li class="hero">射手</li>
+									<li class="hero">辅助</li>
+								</ul>
+							</div>
+							<div id="lanmu_content3_div" class="fl">
+								<div id="hero_1" class="hero_div" style="display: block;">
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/houyi.jpg">
+										<em class="hero_name">后羿</em>
+									</a>
+								</div>
+								<div id="hero_2" class="hero_div" style="display: none;">
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/dianwei.jpg">
+										<em class="hero_name">典韦</em>
+									</a>
+								</div>
+								<div id="hero_3" class="hero_div" style="display: none;">
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/lvbu.jpg">
+										<em class="hero_name">吕布</em>
+									</a>
+								</div>
+								<div id="hero_4" class="hero_div" style="display: none;">
+									<a href="" class="hero_a">
+										<img src="images/yuange.jpg">
+										<em class="hero_name">元歌</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/sunwukong.jpg">
+										<em class="hero_name">孙悟空</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/yuange.jpg">
+										<em class="hero_name">元歌</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/sunwukong.jpg">
+										<em class="hero_name">孙悟空</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/yuange.jpg">
+										<em class="hero_name">元歌</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/sunwukong.jpg">
+										<em class="hero_name">孙悟空</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/yuange.jpg">
+										<em class="hero_name">元歌</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/sunwukong.jpg">
+										<em class="hero_name">孙悟空</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/yuange.jpg">
+										<em class="hero_name">元歌</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/sunwukong.jpg">
+										<em class="hero_name">孙悟空</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/yuange.jpg">
+										<em class="hero_name">元歌</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/sunwukong.jpg">
+										<em class="hero_name">孙悟空</em>
+									</a>
+								</div>
+								<div id="hero_5" class="hero_div" style="display: none;">
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/shangguan.jpg">
+										<em class="hero_name">上官婉儿</em>
+									</a>
+								</div>
+								<div id="hero_6" class="hero_div" style="display: none;">
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/huangzhong.jpg">
+										<em class="hero_name">黄忠</em>
+									</a>
+								</div>
+								<div id="hero_7" class="hero_div" style="display: none;">
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+									<a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a><a href="" class="hero_a">
+										<img src="images/guiguzi.jpg">
+										<em class="hero_name">鬼谷子</em>
+									</a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="lanmu_show">
+					<div class="lanmu_content_main1">
+						<ul class="lanmu_ul">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第二个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第三个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第四个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第五个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第六个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第七个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第八个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div></div>
+					<div class="lanmu_content_main2" style="display: none;">
+						<ul class="lanmu_ul">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												5454
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第二个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第三个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第四个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第五个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第六个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+						<!-- 第七个ul -->
+						<ul class="lanmu_ul" style="display: none;">
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+							<li class="lanmu_ul_li">
+								<a href="#" class="lanmu_ul_a">
+									<div class="lanmu_ul_a_top">
+										<img src="images/20200322.jpg">
+										<p class="lanmu_p">
+											<span class="lanmu_span_left lanmu_span bofang_icon">
+												4878
+											</span>
+											<span class="lanmu_span_right lanmu_span">
+												2020-03-30
+											</span>
+										</p>
+										<div class="cover">
+											<span class="cover_span"></span>
+										</div>
+									</div>
+									<p class="lanmu_ul_a_bottom">
+										王者视角:李元芳化身峡谷大使，维护峡谷和平！
+									</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="main_right">
+				<div id="main_title1" style="overflow: hidden;">
+					<h3 class="mtitle_h3" style="background: url(images/index.png) no-repeat 0px -144px;">英雄/皮肤</h3>
+					<a href="#" class="mtitle_a">
+						<span class="more"></span>更多
+					</a>
+				</div>
+				<div id="main_lanmu-top1">
+					<a href="#" style="color:#000000;border-bottom:3px #f3c258 solid;" class="main_a">最新英雄</a><span
+						class="main_span"></span>
+					<a href="#" class="main_a">最新皮肤</a><span class="main_span"></span>
+					<a href="#" class="main_a">本周限免</a>
+				</div>
+				<div id="main_show_parent" style="overflow: hidden;">
+					<div id="main_right_show">
+						<div class="show_pifu">
+							<div class="pifu_top">
+								<a href="#" class="pifu_top_a">
+									<img src="images/524.jpg">
+									<div class="pifu_top_div">
+										<p class="name">新英雄：蒙犽</p>
+										<p>上线时间：2020.01.09</p>
+									</div>
+								</a>
+							</div>
+							<div class="pifu_bottom">
+								<ul>
+									<li class="hero_img">
+										<a href="#" class="hero_img_a">
+											<img src="images/525.jpg">
+											<div class="hero_cover">
+												<span>
+													鲁班大师
+												</span>
+											</div>
+										</a>
+									</li>
+									<li class="hero_img">
+										<a href="#" class="hero_img_a">
+											<img src="images/523.jpg">
+											<div class="hero_cover">
+												<span>
+													西施
+												</span>
+											</div>
+										</a>
+									</li>
+									<li class="hero_img">
+										<a href="#" class="hero_img_a">
+											<img src="images/518.jpg">
+											<div class="hero_cover">
+												<span>
+													马超
+												</span>
+											</div>
+										</a>
+									</li>
+									<li class="hero_img">
+										<a href="#" class="hero_img_a">
+											<img src="images/522.jpg">
+											<div class="hero_cover">
+												<span>
+													曜
+												</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="show_pifu">
+							<div class="pifu_top">
+								<a href="#" class="pifu_top_a">
+									<img src="images/157_skin.jpg">
+									<div class="pifu_top_div">
+										<p class="name">新皮肤：不知火舞-魅语</p>
+										<p>上线时间：2020.03.24</p>
+									</div>
+								</a>
+							</div>
+							<div class="pifu_bottom">
+								<ul>
+									<li class="hero_img">
+										<a href="#" class="hero_img_a">
+											<img src="images/106_skin.jpg">
+											<div class="hero_cover">
+												<span>
+													小乔•青蛇
+												</span>
+											</div>
+										</a>
+									</li>
+									<li class="hero_img">
+										<a href="#" class="hero_img_a">
+											<img src="images/191_skin.jpg">
+											<div class="hero_cover">
+												<span>
+													大乔•白蛇
+												</span>
+											</div>
+										</a>
+									</li>
+									<li class="hero_img">
+										<a href="#" class="hero_img_a">
+											<img src="images/515_skin.jpg">
+											<div class="hero_cover">
+												<span>
+													嫦娥•如梦令
+												</span>
+											</div>
+										</a>
+									</li>
+									<li class="hero_img">
+										<a href="#" class="hero_img_a">
+											<img src="images/169_skin.jpg">
+											<div class="hero_cover">
+												<span>
+													后羿•如梦令
+												</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="show_pifu">
+							<ul>
+								<li class="hero_img">
+									<a href="#" class="hero_img_a">
+										<img src="images/115.jpg">
+										<div class="hero_cover">
+											<span>
+												高渐离
+											</span>
+										</div>
+									</a>
+								</li>
+								<li class="hero_img">
+									<a href="#" class="hero_img_a">
+										<img src="images/179.jpg">
+										<div class="hero_cover">
+											<span>
+												女娲
+											</span>
+										</div>
+									</a>
+								</li>
+								<li class="hero_img">
+									<a href="#" class="hero_img_a">
+										<img src="images/178.jpg">
+										<div class="hero_cover">
+											<span>
+												杨戬
+											</span>
+										</div>
+									</a>
+								</li>
+								<li class="hero_img">
+									<a href="#" class="hero_img_a">
+										<img src="images/173.jpg">
+										<div class="hero_cover">
+											<span>
+												李元芳
+											</span>
+										</div>
+									</a>
+								</li>
+								<li class="hero_img">
+									<a href="#" class="hero_img_a">
+										<img src="images/168.jpg">
+										<div class="hero_cover">
+											<span>
+												牛魔
+											</span>
+										</div>
+									</a>
+								</li>
+								<li class="hero_img">
+									<a href="#" class="hero_img_a">
+										<img src="images/116.jpg">
+										<div class="hero_cover">
+											<span>
+												阿轲
+											</span>
+										</div>
+									</a>
+								</li>
+								<li class="hero_img">
+									<a href="#" class="hero_img_a">
+										<img src="images/149.jpg">
+										<div class="hero_cover">
+											<span>
+												刘邦
+											</span>
+										</div>
+									</a>
+								</li>
+								<li class="hero_img">
+									<a href="#" class="hero_img_a">
+										<img src="images/more_hero.jpg">
+									</a>
+								</li>
+							</ul>
+							<p class="right_p"><span class="date_icon"></span>限免时间：<em class="date">2020-3-23</em>至<em
+									class="date">2020-3-29</em></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main_bottom" style="min-height: 500px;clear: both;">
+			<div class="bottom_left fl">
+				<div class="bottom_title">
+					<h3 class="mtitle_h3" style="background: url(images/index.png) no-repeat 0px -184px;">赛事中心</h3>
+					<a href="#" class="mtitle_a">
+						<span class="more"></span>更多
+					</a>
+				</div>
+				<div class="main_nav" id="left_nav" style="width: 872px">
+					<a href="#" style="color:#000000;border-bottom:3px #f3c258 solid;" class="main_a">KPL</a><span
+						class="main_span"></span>
+					<a href="#" class="main_a">冠军杯</a><span class="main_span"></span>
+					<a href="#" class="main_a">KPLGT</a><span class="main_span"></span>
+					<a href="#" class="main_a">城市赛</a><span class="main_span"></span>
+					<a href="#" class="main_a">高校联赛</a><span class="main_span"></span>
+					<a href="#" class="main_a">TAG</a><span class="main_span"></span>
+					<a href="#" class="main_a">微信游戏邀请赛</a><span class="main_span"></span>
+					<a href="#" class="main_a">模拟战冬冠</a>
+				</div>
+				<div id="match_show">
+					<!-- kpl -->
+					<div class="show" id="show1">
+						<div class="match_top">
+							<div class="match_img fl">
+								<a href="#">
+									<img src="images/716931509513732.jpg">
+								</a>
+							</div>
+							<div class="macth_news fl">
+								<h3 class="match_first">
+									<a href="" class="match_ul_title">
+										江城、一诺斩获首周东西部最佳选手，GK、DYG表现惊艳！
+									</a>
+									<a href="" class="match_ul_title2">
+										2020年KPL春季赛于3月18日“云开赛”，首周比赛结束后，已有15支战队进行首轮亮相。其中西部战队表现优异，成都AG超玩会、GK、TS均收获2连胜，东部则仅有新军LGD大鹅收获2连胜。第一周积分排行，由成都AG超玩会暂居西部第一，LGD大鹅暂居东部第一，首周周最佳阵容和首周最佳选手已评选完毕。
+									</a>
+								</h3>
+								<ul>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="match_bottom">
+							<ul class="lanmu_ul">
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 冠军杯 -->
+					<div class="show" id="show2" style="display: none;">
+						<div class="match_top">
+							<div class="match_img fl">
+								<a href="#">
+									<img src="images/773281018337004.jpg">
+								</a>
+							</div>
+							<div class="macth_news fl">
+								<h3 class="match_first">
+									<a href="" class="match_ul_title">
+										江城、一诺斩获首周东西部最佳选手，GK、DYG表现惊艳！
+									</a>
+									<a href="" class="match_ul_title2">
+										2020年KPL春季赛于3月18日“云开赛”，首周比赛结束后，已有15支战队进行首轮亮相。其中西部战队表现优异，成都AG超玩会、GK、TS均收获2连胜，东部则仅有新军LGD大鹅收获2连胜。第一周积分排行，由成都AG超玩会暂居西部第一，LGD大鹅暂居东部第一，首周周最佳阵容和首周最佳选手已评选完毕。
+									</a>
+								</h3>
+								<ul>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="match_bottom">
+							<ul class="lanmu_ul">
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- KPLGT -->
+					<div class="show" id="show3" style="display: none;">
+						<div class="match_top">
+							<div class="match_img fl">
+								<a href="#">
+									<img src="images/299151559381525.jpg">
+								</a>
+							</div>
+							<div class="macth_news fl">
+								<h3 class="match_first">
+									<a href="" class="match_ul_title">
+										江城、一诺斩获首周东西部最佳选手，GK、DYG表现惊艳！
+									</a>
+									<a href="" class="match_ul_title2">
+										2020年KPL春季赛于3月18日“云开赛”，首周比赛结束后，已有15支战队进行首轮亮相。其中西部战队表现优异，成都AG超玩会、GK、TS均收获2连胜，东部则仅有新军LGD大鹅收获2连胜。第一周积分排行，由成都AG超玩会暂居西部第一，LGD大鹅暂居东部第一，首周周最佳阵容和首周最佳选手已评选完毕。
+									</a>
+								</h3>
+								<ul>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="match_bottom">
+							<ul class="lanmu_ul">
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 城市赛 -->
+					<div class="show" id="show4" style="display: none;">
+						<div class="match_top">
+							<div class="match_img fl">
+								<a href="#">
+									<img src="images/97728114639480.jpg">
+								</a>
+							</div>
+							<div class="macth_news fl">
+								<h3 class="match_first">
+									<a href="" class="match_ul_title">
+										江城、一诺斩获首周东西部最佳选手，GK、DYG表现惊艳！
+									</a>
+									<a href="" class="match_ul_title2">
+										2020年KPL春季赛于3月18日“云开赛”，首周比赛结束后，已有15支战队进行首轮亮相。其中西部战队表现优异，成都AG超玩会、GK、TS均收获2连胜，东部则仅有新军LGD大鹅收获2连胜。第一周积分排行，由成都AG超玩会暂居西部第一，LGD大鹅暂居东部第一，首周周最佳阵容和首周最佳选手已评选完毕。
+									</a>
+								</h3>
+								<ul>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">冠军杯</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="match_bottom">
+							<ul class="lanmu_ul">
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 高校联赛 -->
+					<div class="show" id="show5" style="display: none;">
+						<div class="match_top">
+							<div class="match_img fl">
+								<a href="#">
+									<img src="images/7103135923848.jpg">
+								</a>
+							</div>
+							<div class="macth_news fl">
+								<h3 class="match_first">
+									<a href="" class="match_ul_title">
+										江城、一诺斩获首周东西部最佳选手，GK、DYG表现惊艳！
+									</a>
+									<a href="" class="match_ul_title2">
+										2020年KPL春季赛于3月18日“云开赛”，首周比赛结束后，已有15支战队进行首轮亮相。其中西部战队表现优异，成都AG超玩会、GK、TS均收获2连胜，东部则仅有新军LGD大鹅收获2连胜。第一周积分排行，由成都AG超玩会暂居西部第一，LGD大鹅暂居东部第一，首周周最佳阵容和首周最佳选手已评选完毕。
+									</a>
+								</h3>
+								<ul>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="match_bottom">
+							<ul class="lanmu_ul">
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- TAG -->
+					<div class="show" id="show6" style="display: none;">
+						<div class="match_top">
+							<div class="match_img fl">
+								<a href="#">
+									<img src="images/76255391666445.jpg">
+								</a>
+							</div>
+							<div class="macth_news fl">
+								<h3 class="match_first">
+									<a href="" class="match_ul_title">
+										江城、一诺斩获首周东西部最佳选手，GK、DYG表现惊艳！
+									</a>
+									<a href="" class="match_ul_title2">
+										2020年KPL春季赛于3月18日“云开赛”，首周比赛结束后，已有15支战队进行首轮亮相。其中西部战队表现优异，成都AG超玩会、GK、TS均收获2连胜，东部则仅有新军LGD大鹅收获2连胜。第一周积分排行，由成都AG超玩会暂居西部第一，LGD大鹅暂居东部第一，首周周最佳阵容和首周最佳选手已评选完毕。
+									</a>
+								</h3>
+								<ul>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="match_bottom">
+							<ul class="lanmu_ul">
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 微信游戏邀请赛 -->
+					<div class="show" id="show7" style="display: none;">
+						<div class="match_top">
+							<div class="match_img fl">
+								<a href="#">
+									<img src="images/597531354623599.jpg">
+								</a>
+							</div>
+							<div class="macth_news fl">
+								<h3 class="match_first">
+									<a href="" class="match_ul_title">
+										江城、一诺斩获首周东西部最佳选手，GK、DYG表现惊艳！
+									</a>
+									<a href="" class="match_ul_title2">
+										2020年KPL春季赛于3月18日“云开赛”，首周比赛结束后，已有15支战队进行首轮亮相。其中西部战队表现优异，成都AG超玩会、GK、TS均收获2连胜，东部则仅有新军LGD大鹅收获2连胜。第一周积分排行，由成都AG超玩会暂居西部第一，LGD大鹅暂居东部第一，首周周最佳阵容和首周最佳选手已评选完毕。
+									</a>
+								</h3>
+								<ul>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="match_bottom">
+							<ul class="lanmu_ul">
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 模拟战东冠 -->
+					<div class="show" id="show8" style="display: none;">
+						<div class="match_top">
+							<div class="match_img fl">
+								<a href="#">
+									<img src="images/618551303933101.jpg">
+								</a>
+							</div>
+							<div class="macth_news fl">
+								<h3 class="match_first">
+									<a href="" class="match_ul_title">
+										江城、一诺斩获首周东西部最佳选手，GK、DYG表现惊艳！
+									</a>
+									<a href="" class="match_ul_title2">
+										2020年KPL春季赛于3月18日“云开赛”，首周比赛结束后，已有15支战队进行首轮亮相。其中西部战队表现优异，成都AG超玩会、GK、TS均收获2连胜，东部则仅有新军LGD大鹅收获2连胜。第一周积分排行，由成都AG超玩会暂居西部第一，LGD大鹅暂居东部第一，首周周最佳阵容和首周最佳选手已评选完毕。
+									</a>
+								</h3>
+								<ul>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+									<li>
+										<span class="match_icon fl">KPL</span>
+										<a href="#" class="news_li_a fl">
+											王者电竞周刊：RW侠.Djie狂铁获四杀，武汉eStar本周即将首次亮相新赛季
+										</a>
+										<em class="match_date">03-24</em>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="match_bottom">
+							<ul class="lanmu_ul">
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+								<li class="lanmu_ul_li">
+									<a href="#" class="lanmu_ul_a">
+										<div class="lanmu_ul_a_top">
+											<img src="images/20200322.jpg">
+											<p class="lanmu_p">
+												<span class="lanmu_span_left lanmu_span bofang_icon">
+													4878
+												</span>
+												<span class="lanmu_span_right lanmu_span">
+													2020-03-30
+												</span>
+											</p>
+											<div class="cover">
+												<span class="cover_span"></span>
+											</div>
+										</div>
+										<p class="lanmu_ul_a_bottom">
+											王者视角:李元芳化身峡谷大使，维护峡谷和平！
+										</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_right fr">
+				<div class="bottom_title">
+					<h3 class="mtitle_h3" style="background: url(images/index.png) no-repeat -157px -106px;">KPL赛程</h3>
+					<a href="#" class="mtitle_a">
+						<span class="more"></span>更多
+					</a>
+				</div>
+				<div class="main_nav" id="right_nav" style="width: 295px">
+					<span class="pvp_span fl">时间</span>
+					<span class="pvp_span fl pvp_left">战队</span>
+					<span class="pvp_span fl pvp_right">战队</span>
+				</div>
+				<div class="pvp_content" style="margin-bottom: 15px;">
+					<h3>
+						<span class="pvp_time fl">
+							3-26 18:00
+						</span>
+						<span class="pvp_team fl">
+							<img src="images/phphlNB7F14280912891583315224.png">
+							<em class="team_name">上海EDG.M</em>
+						</span>
+						<span class="pvp_vs fl">
+							vs
+						</span>
+						<span class="pvp_team fl">
+							<img src="images/phpuOjj8f8220467551583126358.png">
+							<em class="team_name">DYG</em>
+						</span>
+					</h3>
+					<h3>
+						<span class="pvp_time fl">
+							3-26 20:00
+						</span>
+						<span class="pvp_team fl">
+							<img src="images/phpAzXEau7798660911583126461.png">
+							<em class="team_name">WE</em>
+						</span>
+						<span class="pvp_vs fl">
+							vs
+						</span>
+						<span class="pvp_team fl">
+							<img src="images/phpCwTlbK8806386861583126309.png">
+							<em class="team_name">成都AG</em>
+						</span>
+					</h3>
+				</div>
+				<div id="pvp_pic">
+					<a href="#" id="pvp_a">
+						<img src="images/102681321262060.jpg">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 顶部友情链接 -->
+	<div id="header">
+		<ul>
+			<li class="header-li1">
+				<a href="#"></a>
+			</li>
+			<li class="header-li2">
+				<a href=""></a>
+				<div id="header_image">
+					<img src="images/7372f9cf0c8b1c66eec8cb33fd2cdb37.jpg">
+				</div>
+			</li>
+			<li class="right_li">
+				<h3 class="chengzhang_bg right_h3"><a href="">成长守护平台</a></h3>
+				<h3 class="youxi_bj right_h3" id="pai_h3">
+					<a href="">腾讯游戏排行榜</a>
+					<div id="paihangbang">
+						<div id="pai_parent">
+							<div id="pai_left" class="pai">
+								<h3 class="title">新品端游排行榜</h3>
+								<ul>
+									<li class="pai_li" style="height: 90px;">
+										<p class="pai_p" style="display: none;">FLFA OL4</p>
+										<div class="pai_show" style="display: block;">
+											<img src="images/20191120202505-454519.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">1</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">nba2ks</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120202737-294976.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">2</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">冒险岛2</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120202810-141360.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">3</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">流放之路</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120202858-673749.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">4</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">穿越火线</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120202955-681017.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">5</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">极品飞车 online</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120203032-752393.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">6</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">炫舞</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120203106-118547.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">7</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">御龙在天</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120203230-364868.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">8</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">使命召唤</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120203307-979066.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">9</span>
+									</li>
+								</ul>
+							</div>
+							<div id="pai_content" class="pai">
+								<h3 class="title">热门端游排行榜</h3>
+								<ul>
+									<li class="pai_li" style="height: 90px;">
+										<p class="pai_p" style="display: none;">英雄联盟OL</p>
+										<div class="pai_show" style="display: block;">
+											<img src="images/20191218150448-940180.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">1</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">穿越火线</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191206174440-880655.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">2</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">DNF</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191211111843-528702.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">3</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">天涯明月刀</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191206174544-494677.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">4</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">炫舞</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20200213115823-299447.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">5</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">使命召唤OL</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120203307-979066.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">6</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">FLFA OL3</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120195048-522808.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">7</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">逆战</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120195946-581113.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">8</span>
+									</li>
+									<li class="pai_li">
+										<p class="pai_p">nba2ks</p>
+										<div class="pai_show" style="display: none;">
+											<img src="images/20191120202737-294976.jpg" width="200" height="92">
+											<div class="pai_bottom_posn">
+												<a class="span_left pai_bottom_a">
+													进入官网
+												</a>
+												<a class="span_right pai_bottom_a">
+													下载游戏
+												</a>
+											</div>
+										</div>
+										<span class="pai_span">9</span>
+									</li>
+								</ul>
+							</div>
+							<div id="pai_right" class="pai">
+								<div id="pai_right_top">
+									<h3 class="title">新品手游排行榜</h3>
+									<ul class="color_paiming">
+										<li class="pai_li" style="height: 90px;">
+											<p class="pai_p" style="display: none;">雪雁领主手游</p>
+											<div class="pai_show" style="display: block;">
+												<img src="images/20191218153132-210218.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">1</span>
+										</li>
+										<li class="pai_li" style="height: 16px;">
+											<p class="pai_p" style="display: block;">猎人手游</p>
+											<div class="pai_show" style="display: none;">
+												<img src="images/20191204115003-539627.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">2</span>
+										</li>
+										<li class="pai_li" style="height: 16px;">
+											<p class="pai_p" style="display: block;">狐妖小红娘</p>
+											<div class="pai_show" style="display: none;">
+												<img src="images/20191129182736-522913.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">3</span>
+										</li>
+										<li class="pai_li" style="height: 16px;">
+											<p class="pai_p" style="display: block;">龙珠最强之战</p>
+											<div class="pai_show" style="display: none;">
+												<img src="images/20191119172818-355997.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">4</span>
+										</li>
+										<li class="pai_li" style="height: 16px;">
+											<p class="pai_p" style="display: block;">多多自走棋</p>
+											<div class="pai_show" style="display: none;">
+												<img src="images/20191119173939-424857.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">5</span>
+										</li>
+									</ul>
+									<h3 class="title" style="margin-bottom: 5px;">热门手游排行榜</h3>
+									<ul class="color_paiming1">
+										<li class="pai_li" style="height: 16px;">
+											<p class="pai_p" style="display: block;">王者荣耀</p>
+											<div class="pai_show" style="display: none;">
+												<img src="images/20191120191344-555908.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">1</span>
+										</li>
+										<li class="pai_li" style="height: 16px;">
+											<p class="pai_p" style="display: block;">和平精英</p>
+											<div class="pai_show" style="display: none;">
+												<img src="images/20191129182841-480452.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">2</span>
+										</li>
+										<li class="pai_li" style="height: 16px;">
+											<p class="pai_p" style="display: block;">穿越火线：枪战王者</p>
+											<div class="pai_show" style="display: none;">
+												<img src="images/20191129183301-539627.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">3</span>
+										</li>
+										<li class="pai_li" style="height: 16px;">
+											<p class="pai_p" style="display: block;">龙族幻想</p>
+											<div class="pai_show" style="display: none;">
+												<img src="images/20191120192630-568763.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">4</span>
+										</li>
+										<li class="pai_li" style="height: 16px;">
+											<p class="pai_p" style="display: block;">三国群英传-霸王之业</p>
+											<div class="pai_show" style="display: none;">
+												<img src="images/20191129183201-834392.jpg" width="200" height="92">
+												<div class="pai_bottom_posn">
+													<a class="span_left pai_bottom_a">
+														进入官网
+													</a>
+													<div class="pai_div_xiazai">
+														<span class="pai_div_xiazai_span">下载游戏</span>
+														<div class="pai_xia-a">
+															<a href="" class="anzhuo_xiazai"></a>
+															<a href="" class="ios_xiazai"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="pai_span">5</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</h3>
+			</li>
+		</ul>
+	</div>
+	<!-- footer -->
+	<div id="footer" style="background: url(images/bg_footer.jpg) no-repeat;">
+		<div id="foot_main">
+			<div id="logo" style="width:1180px;overflow: hidden;">
+				<a href="" class="logo1"></a>
+				<a href="" class="logo2"></a>
+			</div>
+			<hr>
+			<div id="footer_bottom">
+				<div id="footer_left" class="fl">
+					<ul>
+						<li>抵制不良游戏</li>
+						<li>拒绝盗版游戏</li>
+						<li>注意自我保护</li>
+						<li>谨防受骗上当</li>
+						<li>适度游戏益脑</li>
+						<li>沉迷游戏伤身</li>
+						<li>合理安排时间</li>
+						<li>享受健康生活</li>
+					</ul>
+					<p>《王者荣耀》全部背景故事发生于架空世界“王者大陆”中。相关人物、地理、事件均为艺术创作，并非正史。若因观看王者故事对相关历史人物产生兴趣，建议查阅正史记载。</p>
+				</div>
+				<div id="footer_right" class="fr">
+					<ul>
+						<li>腾讯互动娱乐&nbsp;&nbsp;|&nbsp;&nbsp;服务条款&nbsp;&nbsp;|&nbsp;&nbsp;隐私政策&nbsp;&nbsp;|&nbsp;&nbsp;腾讯游戏招聘&nbsp;&nbsp;|&nbsp;&nbsp;腾讯游戏客服&nbsp;&nbsp;|&nbsp;&nbsp;游戏地图&nbsp;&nbsp;|&nbsp;&nbsp;商务合作&nbsp;&nbsp;|&nbsp;&nbsp;腾讯网&nbsp;&nbsp;|&nbsp;&nbsp;网站导航
+						</li>
+						<li>COPYRIGHT ? 1998 - 2018 TENCENT. ALL RIGHTS RESERVED<span>腾讯公司版权所有</span></li>
+						<li>粤网文[2017]6138-1456号|新出网证（粤）字010号</li>
+						<li>文网游备字[2016]M-CSG 0059号|新广出审[2017] 6712号|ISBN 978-7-7979-8408-9</li>
+						<li>全国文化市场统一举报电话：12318</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- <iframe src="footer.html" width="1200px" height="362px" frameborder="0" margin: 0 auto;></iframe> -->
+	</div>
+	<script>
+		$(function () {
+			$("#XiaoGuai2").mouseenter(function () {
+				$("#GuaiWu_Tip").stop().fadeIn(600);
+			})
+			$("#XiaoGuai2").mouseleave(function () {
+				$("#GuaiWu_Tip").stop().fadeOut(600);
+			})
+
+			function dragPanelMove(moveDiv) {
+				$(moveDiv).mousedown(function (e) {
+					var isMove = true
+					var divX = e.pageX - $(moveDiv).offset().left
+					var divY = e.pageY - $(moveDiv).offset().top
+
+					$(document).mousemove(function (e) {
+						if (isMove) {
+							$(moveDiv).css({
+								"top": e.pageY - divY,
+								"left": e.pageX - divX,
+							})
+							$("#GuaiWu_Tip").stop().fadeOut();
+						}
+					}).mouseup(function () {
+						isMove = false
+						// $("#GuaiWu_Tip").stop().fadeIn();
+					})
+				})
+				// $(big).hide()
+				// $(small).click(function () {
+				// 	$(bannerDiv).hide()
+				// 	$(contentDiv).hide()
+				// 	$(big).show()
+				// 	// $(moveDiv).css("bottom",30)//在后面会出错
+				// 	var dh = $(document).height() - 50
+				// 	$(moveDiv).css("top", dh)
+				// })
+				// $(big).click(function () {
+				// 	$(bannerDiv).show()
+				// 	$(contentDiv).show()
+				// 	$(big).hide()
+				// 	$(moveDiv).css("top", 30)
+				// })
+				// $(close).click(function () {
+				// 	$(moveDiv).hide()
+				// })
+			}
+			dragPanelMove("#XiaoGuai")
+
+		})
+	</script>
+
+</body>
+
+</html>

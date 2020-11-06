@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王者荣耀官方网站—腾讯游戏</title>
+    <link rel="stylesheet" href="CSS/coming.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="JS/coming.js"></script>
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            <div id="nav">
+                <a href="index.html" id="logo"></a>
+                <div id="warp_nav">
+                    <a href="" class="nav_sel">
+                        首页
+                        <i>HOME</i>
+                    </a>
+                    <a href="">
+                        新英雄
+                        <i>HERO</i>
+                    </a>
+                    <a href="">
+                        新皮肤
+                        <i>SKIN</i>
+                    </a>
+                    <a href="">
+                        英雄重塑
+                        <i>REBUILD</i>
+                    </a>
+                    <a href="">
+                        英雄调整
+                        <i>ADJUSTMENT</i>
+                    </a>
+                    <a href="">
+                        新模式
+                        <i>MODE</i>
+                    </a>
+                    <a href="">
+                        新系统
+                        <i>NEWSYS</i>
+                    </a>
+                    <a href="">
+                        系统优化
+                        <i>SYSTEM</i>
+                    </a>
+                    <a href="">
+                        美术优化
+                        <i>ARTS</i>
+                    </a>
+                </div>
+                <!-- 登录模块 -->
+                <div id="login_User">
+                    <a href="">
+                        <img src="./images/下载.png" alt="">
+                        <!-- 未登录的状态 -->
+                        <div id="login_none">
+                            <a href="">欢迎登录</a>
+                            <p>登录后查看游戏战绩</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- <div id="lunbo_3d">
+            <div class="lunbo_show">
+                <div class="lunbo_all">
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0"
+                        style="transform: translateX(11440px) scale(-2.2); z-index: 839; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a>
+                        <img src="./images/28d2e3ba54de3051fa44820fc14f67e8.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>天狼绘梦者 </p>
+                            <p class="banner-tit2">上线时间：即将上线</p>
+                            <p class="banner-tit3">上官婉儿新皮肤天狼绘梦者</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1"
+                        style="transform: translateX(10140px) scale(-2); z-index: 849; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/ec76fdc2a414a80c3a8057dc17ed0484.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新英雄：</span>蒙恬 </p>
+                            <p class="banner-tit2">上线时间：2020.06.02</p>
+                            <p class="banner-tit3">新英雄秩序统将-蒙恬</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                        data-swiper-slide-index="2"
+                        style="transform: translateX(8918px) scale(-1.8); z-index: 859; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/280b93bba1a6c567d18ec2a0597e92ea.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>时之恋人 </p>
+                            <p class="banner-tit2">上线时间：2020.05.20</p>
+                            <p class="banner-tit3">刘备新皮肤时之恋人</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                        data-swiper-slide-index="3"
+                        style="transform: translateX(7774px) scale(-1.6); z-index: 869; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/d86dae0f2a31700a579dc792ee7de5f1.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>时之恋人 </p>
+                            <p class="banner-tit2">上线时间：2020.05.20</p>
+                            <p class="banner-tit3">孙尚香新皮肤时之恋人</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                        data-swiper-slide-index="4"
+                        style="transform: translateX(6708px) scale(-1.4); z-index: 879; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a>
+                        <img src="./images/0b8b6d5872b70b38e101ac6cc0def0b6.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>烈魂 </p>
+                            <p class="banner-tit2">上线时间：2020.05.08</p>
+                            <p class="banner-tit3">五虎上将皮肤烈魂·黄忠</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5"
+                        style="transform: translateX(5720px) scale(-1.2); z-index: 889; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a>
+                        <img src="./images/2d72864eac908b2f8554ff577e643b2e.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>龙胆 </p>
+                            <p class="banner-tit2">上线时间：2020.05.05</p>
+                            <p class="banner-tit3">五虎上将皮肤龙胆·赵云</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6"
+                        style="transform: translateX(4810px) scale(-1); z-index: 899; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a>
+                        <img src="./images/072e8702679950e0d4779a902a00a6e6.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>遇见神鹿 </p>
+                            <p class="banner-tit2">上线时间：2020.04.27</p>
+                            <p class="banner-tit3">五五开黑节皮肤遇见神鹿·瑶</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7"
+                        style="transform: translateX(3978px) scale(-0.8); z-index: 909; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a>
+                        <img src="./images/bb57821cb3df6bf7c962f375649063b4.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>修罗 </p>
+                            <p class="banner-tit2">上线时间：2020.04.10</p>
+                            <p class="banner-tit3">SNK正版授权皮肤修罗·橘右京</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8"
+                        style="transform: translateX(3224px) scale(-0.6); z-index: 919; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/afda9866bcf0d5b44a500a15733a744b.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>迷踪丽影 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">战令限定皮肤迷踪丽影·阿轲</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="9"
+                        style="transform: translateX(2548px) scale(-0.4); z-index: 929; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img
+                            src="./images/3df7294640bc9903b6134d6f8dd46ddc.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>夺宝奇兵 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">战令限定皮肤夺宝奇兵·刘邦</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="10"
+                        style="transform: translateX(1950px) scale(-0.2); z-index: 939; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/f8724ef7e628d620525fb78307ec4ba2.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新英雄：</span>镜 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">新英雄破镜之刃-镜</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="11"
+                        style="transform: translateX(1430px) scale(0); z-index: 949; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/fccd4f104472ba330a51d8932baf1386.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>疑决卦 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">S19赛季皮肤疑决卦</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="12"
+                        style="transform: translateX(988px) scale(0.2); z-index: 959; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/67dd10d41657c84d6f618b156b5b1406.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>魅语 </p>
+                            <p class="banner-tit2">上线时间：2020.03.24</p>
+                            <p class="banner-tit3">不知火舞新皮肤魅语</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="0"
+                        style="transform: translateX(624px) scale(0.4); z-index: 969; opacity: 1; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/28d2e3ba54de3051fa44820fc14f67e8.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>天狼绘梦者 </p>
+                            <p class="banner-tit2">上线时间：即将上线</p>
+                            <p class="banner-tit3">上官婉儿新皮肤天狼绘梦者</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="1"
+                        style="transform: translateX(338px) scale(0.6); z-index: 979; opacity: 1; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/ec76fdc2a414a80c3a8057dc17ed0484.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新英雄：</span>蒙恬 </p>
+                            <p class="banner-tit2">上线时间：2020.06.02</p>
+                            <p class="banner-tit3">新英雄秩序统将-蒙恬</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2"
+                        style="transform: translateX(130px) scale(0.8); z-index: 989; opacity: 1; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/280b93bba1a6c567d18ec2a0597e92ea.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>时之恋人 </p>
+                            <p class="banner-tit2">上线时间：2020.05.20</p>
+                            <p class="banner-tit3">刘备新皮肤时之恋人</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3"
+                        style="transform: translateX(0px) scale(1); z-index: 999; opacity: 1; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a> <img src="./images/d86dae0f2a31700a579dc792ee7de5f1.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>时之恋人 </p>
+                            <p class="banner-tit2">上线时间：2020.05.20</p>
+                            <p class="banner-tit3">孙尚香新皮肤时之恋人</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="4"
+                        style="transform: translateX(-130px) scale(0.8); z-index: 989; opacity: 1; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a>
+                        <img src="./images/0b8b6d5872b70b38e101ac6cc0def0b6.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>烈魂 </p>
+                            <p class="banner-tit2">上线时间：2020.05.08</p>
+                            <p class="banner-tit3">五虎上将皮肤烈魂·黄忠</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="5"
+                        style="transform: translateX(-338px) scale(0.6); z-index: 979; opacity: 1; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a>
+                        <img src="./images/2d72864eac908b2f8554ff577e643b2e.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>龙胆 </p>
+                            <p class="banner-tit2">上线时间：2020.05.05</p>
+                            <p class="banner-tit3">五虎上将皮肤龙胆·赵云</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="6"
+                        style="transform: translateX(-624px) scale(0.4); z-index: 969; opacity: 1; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a>
+                        <img src="./images/072e8702679950e0d4779a902a00a6e6.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>遇见神鹿 </p>
+                            <p class="banner-tit2">上线时间：2020.04.27</p>
+                            <p class="banner-tit3">五五开黑节皮肤遇见神鹿·瑶</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="7"
+                        style="transform: translateX(-988px) scale(0.2); z-index: 959; opacity: 0; transition-duration: 0ms;">
+                        <a href="" target="_blank"></a>
+                        <img src="./images/bb57821cb3df6bf7c962f375649063b4.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>修罗 </p>
+                            <p class="banner-tit2">上线时间：2020.04.10</p>
+                            <p class="banner-tit3">SNK正版授权皮肤修罗·橘右京</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="8"
+                        style="transform: translateX(-1430px) scale(0); z-index: 949; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/afda9866bcf0d5b44a500a15733a744b.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>迷踪丽影 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">战令限定皮肤迷踪丽影·阿轲</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="9"
+                        style="transform: translateX(-1950px) scale(-0.2); z-index: 939; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/3df7294640bc9903b6134d6f8dd46ddc.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>夺宝奇兵 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">战令限定皮肤夺宝奇兵·刘邦</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="10"
+                        style="transform: translateX(-2548px) scale(-0.4); z-index: 929; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/f8724ef7e628d620525fb78307ec4ba2.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新英雄：</span>镜 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">新英雄破镜之刃-镜</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="11"
+                        style="transform: translateX(-3224px) scale(-0.6); z-index: 919; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/fccd4f104472ba330a51d8932baf1386.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>疑决卦 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">S19赛季皮肤疑决卦</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-swiper-slide-index="12"
+                        style="transform: translateX(-3978px) scale(-0.8); z-index: 909; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/67dd10d41657c84d6f618b156b5b1406.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>魅语 </p>
+                            <p class="banner-tit2">上线时间：2020.03.24</p>
+                            <p class="banner-tit3">不知火舞新皮肤魅语</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0"
+                        style="transform: translateX(-4810px) scale(-1); z-index: 899; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/28d2e3ba54de3051fa44820fc14f67e8.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>天狼绘梦者 </p>
+                            <p class="banner-tit2">上线时间：即将上线</p>
+                            <p class="banner-tit3">上官婉儿新皮肤天狼绘梦者</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1"
+                        style="transform: translateX(-5720px) scale(-1.2); z-index: 889; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/ec76fdc2a414a80c3a8057dc17ed0484.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新英雄：</span>蒙恬 </p>
+                            <p class="banner-tit2">上线时间：2020.06.02</p>
+                            <p class="banner-tit3">新英雄秩序统将-蒙恬</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                        data-swiper-slide-index="2"
+                        style="transform: translateX(-6708px) scale(-1.4); z-index: 879; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/280b93bba1a6c567d18ec2a0597e92ea.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>时之恋人 </p>
+                            <p class="banner-tit2">上线时间：2020.05.20</p>
+                            <p class="banner-tit3">刘备新皮肤时之恋人</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                        data-swiper-slide-index="3"
+                        style="transform: translateX(-7774px) scale(-1.6); z-index: 869; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/d86dae0f2a31700a579dc792ee7de5f1.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>时之恋人 </p>
+                            <p class="banner-tit2">上线时间：2020.05.20</p>
+                            <p class="banner-tit3">孙尚香新皮肤时之恋人</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                        data-swiper-slide-index="4"
+                        style="transform: translateX(-8918px) scale(-1.8); z-index: 859; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a>
+                        <img src="./images/0b8b6d5872b70b38e101ac6cc0def0b6.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>烈魂 </p>
+                            <p class="banner-tit2">上线时间：2020.05.08</p>
+                            <p class="banner-tit3">五虎上将皮肤烈魂·黄忠</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5"
+                        style="transform: translateX(-10140px) scale(-2); z-index: 849; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a>
+                        <img src="./images/2d72864eac908b2f8554ff577e643b2e.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>龙胆 </p>
+                            <p class="banner-tit2">上线时间：2020.05.05</p>
+                            <p class="banner-tit3">五虎上将皮肤龙胆·赵云</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6"
+                        style="transform: translateX(-11440px) scale(-2.2); z-index: 839; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a>
+                        <img src="./images/072e8702679950e0d4779a902a00a6e6.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>遇见神鹿 </p>
+                            <p class="banner-tit2">上线时间：2020.04.27</p>
+                            <p class="banner-tit3">五五开黑节皮肤遇见神鹿·瑶</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7"
+                        style="transform: translateX(-12818px) scale(-2.4); z-index: 829; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a>
+                        <img src="./images/bb57821cb3df6bf7c962f375649063b4.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>修罗 </p>
+                            <p class="banner-tit2">上线时间：2020.04.10</p>
+                            <p class="banner-tit3">SNK正版授权皮肤修罗·橘右京</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8"
+                        style="transform: translateX(-14274px) scale(-2.6); z-index: 819; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/afda9866bcf0d5b44a500a15733a744b.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>迷踪丽影 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">战令限定皮肤迷踪丽影·阿轲</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="9"
+                        style="transform: translateX(-15808px) scale(-2.8); z-index: 809; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/3df7294640bc9903b6134d6f8dd46ddc.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>夺宝奇兵 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">战令限定皮肤夺宝奇兵·刘邦</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="10"
+                        style="transform: translateX(-17420px) scale(-3); z-index: 799; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/f8724ef7e628d620525fb78307ec4ba2.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新英雄：</span>镜 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">新英雄破镜之刃-镜</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="11"
+                        style="transform: translateX(-19110px) scale(-3.2); z-index: 789; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/fccd4f104472ba330a51d8932baf1386.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>疑决卦 </p>
+                            <p class="banner-tit2">上线时间：2020.03.31</p>
+                            <p class="banner-tit3">S19赛季皮肤疑决卦</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="12"
+                        style="transform: translateX(-20878px) scale(-3.4); z-index: 779; opacity: 0; transition-duration: 0ms;">
+                        <a href=" " target="_blank"></a> <img src="./images/67dd10d41657c84d6f618b156b5b1406.jpg">
+                        <div class="banner-title">
+                            <p class="banner-tit1"> <span class="color">新皮肤：</span>魅语 </p>
+                            <p class="banner-tit2">上线时间：2020.03.24</p>
+                            <p class="banner-tit3">不知火舞新皮肤魅语</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <div class="new_title" id="hero">
+        <div class="new_herder">
+            <h3>新英雄</h3>
+        </div>
+        <div id="pvp_hero">
+            <div id="pvp_hero_top" class="cont_top">
+                <div class="pvp_top_left">
+                    <div class="pvp_left_show">
+                        <div class="hero_tit">
+                            <p>秩序统将</p>
+                            <span class="hero_title_name">蒙恬</span>
+                        </div>
+                        <div class="hero_tab">
+                            <span>战士</span>
+                            <span>玄雍大将</span>
+                            <span>威严果敢</span>
+                        </div>
+                        <div class="hero_type">
+                            <i class="zhanshi"></i>
+                        </div>
+                        <div class="hero_time">
+                            上线时间：2020.06.02
+                        </div>
+                        <div class="hero_gif">
+                            <img src="./images/04c191c73fdd83e8f3f3cf045fd5c710.gif" alt="">
+                        </div>
+                        <div class="hero_money">
+                            <div class="ticket_m">点券价格</div>
+                            <div class="ticket_p">
+                                <p class="ticket_now">388</p>
+                                <p class="ticket_last"><s>点券原价588</s></p>
+                            </div>
+                            <a href="" class="look_hero">
+                                <span>查看英雄 <i class="more-icon"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pvp_top_right">
+                    <a href="">
+                        <img src="./images/c40623028cb6daa457aa4202090c3746.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="newHero" class="cont_bottom">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="./images/10db4f9ec297e1f7a19cb8b25b9a6345.jpg" alt="">
+                        <p class="Hero_name">新英雄-镜</p>
+                        <p class="hover_mask">
+                            <span class="hero_n">新英雄-镜</span>
+                            <span class="hero_ty">刺客</span>
+                            <span class="hero_clk">上线时间：2020.03.31</span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/9f8e118bcffe5a1ae28a354da7861528.jpg" alt="">
+                        <p class="Hero_name">新英雄-蒙犽</p>
+                        <p class="hover_mask">
+                            <span class="hero_n">新英雄-蒙犽</span>
+                            <span class="hero_ty">射手</span>
+                            <span class="hero_clk">上线时间：2020.01.09</span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/28db61c1ea2ddd5d55904f9d99ec1439.jpg" alt="">
+                        <p class="Hero_name">新英雄-鲁班大师</p>
+                        <p class="hover_mask">
+                            <span class="hero_n">新英雄-鲁班大师</span>
+                            <span class="hero_ty">辅助</span>
+                            <span class="hero_clk">上线时间：2019.11.28</span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/6d7c6fd52a5e09f4feab576a8e0f0af3.jpg" alt="">
+                        <p class="Hero_name">新英雄-西施</p>
+                        <p class="hover_mask">
+                            <span class="hero_n">新英雄-西施</span>
+                            <span class="hero_ty">法师</span>
+                            <span class="hero_clk">上线时间：2019.09.24</span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="new_title">
+        <div class="new_herder" id="new_skin">
+            <h3>新皮肤</h3>
+        </div>
+        <div id="pvp_hero">
+            <div id="pvp_hero_top" class="cont_top">
+                <div class="pvp_top_left">
+                    <div class="pvp_left_show">
+                        <div class="hero_tit">
+                            <p>上官婉儿</p>
+                            <span class="hero_title_name">天狼绘梦者</span>
+                        </div>
+                        <div class="hero_tab">
+                            <span>KPL限定</span>
+                            <span>天狼星计划</span>
+                            <span>心中有梦</span>
+                        </div>
+                        <div class="hero_type" style="display: none;">
+                            <i class="zhanshi"></i>
+                        </div>
+                        <div class="hero_time" id="skin_time">
+                            上线时间：即将上线
+                        </div>
+                        <div class="hero_gif">
+                            <img src="./images/8ae48aa8a5728167006e73e6c2318768.gif" alt="">
+                        </div>
+                        <div class="hero_money">
+                            <a href="">
+                                <div class="look_hero look_skin">
+                                    <span>查看皮肤 <i class="more-icon"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pvp_top_right">
+                    <a href="">
+                        <img src="./images/77f643c6ba593a98cca123565a0b3bae.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="newskin" class="cont_bottom">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="./images/f26018c697c36c63c0598d6407a03f0c.jpg" alt="">
+                        <p class="Hero_name">时之恋人-刘备</p>
+                        <p class="hover_mask">
+                            <span class="hero_n">时之恋人-刘备</span>
+                            <span class="hero_ty">战士</span>
+                            <span class="hero_clk">上线时间：2020.05.20</span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/b5c227a18446b5bfcf6848b594b4a2a5.jpg" alt="">
+                        <p class="Hero_name">时之恋人-孙尚香</p>
+                        <p class="hover_mask">
+                            <span class="hero_n">时之恋人-孙尚香</span>
+                            <span class="hero_ty">射手</span>
+                            <span class="hero_clk">上线时间：2020.05.20</span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/1746e06df6952d28e150f046ccbbe3ce.jpg" alt="">
+                        <p class="Hero_name">烈魂-黄忠</p>
+                        <p class="hover_mask">
+                            <span class="hero_n">烈魂-黄忠</span>
+                            <span class="hero_ty">射手</span>
+                            <span class="hero_clk">上线时间：2020.05.08</span>
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./images/dc1cc5fdc89a131be2e3ae18075bce35.jpg" alt="">
+                        <p class="Hero_name">龙胆-赵云</p>
+                        <p class="hover_mask">
+                            <span class="hero_n">龙胆-赵云</span>
+                            <span class="hero_ty">刺客</span>
+                            <span class="hero_clk">上线时间：2020.05.05</span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

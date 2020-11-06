@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/all.css">
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script src="./JS/index.js"></script>
+    <script src="./JS/hreolist.js"></script>
+    <link rel="stylesheet" href="CSS/herolist.css">
+    <script src="./JS/json.js"></script>
+    <title>英雄资料列表页-英雄介绍-王者荣耀官方网站-腾讯游戏</title>
+</head>
+
+<body>
+    <div id="top-all">
+        <div id="top_bj"></div>
+        <div id="top">
+            <div id="nav">
+                <div id="nav-1">
+                    <div id="logopng"><img src="images/logo.png"></div>
+                    <ul>
+                        <li><a href="index.html">官网首页<em class="top_tips">HOME</em></a></li>
+                        <li><a href="herolist.html">游戏资料<em class="top_tips">DATA</em></a></li>
+                        <li><a href="#">内容中心<em class="top_tips">CONTENTS</em></a></li>
+                        <li><a href="#">赛事中心<em class="top_tips">MATCH</em></a></li>
+                        <li><a href="#">百态王者<em class="top_tips">CULTURE</em></a></li>
+                        <li><a href="#">社区活动<em class="top_tips">COMMUNITY</em></a></li>
+                        <li><a href="#">玩家支持<em class="top_tips">PLAYER</em></a></li>
+                    </ul>
+                    <div id="login">
+                        <a href="" style="height: 100px;"><img src="images/下载.png"></a>
+                        <div id="login-user">
+                            <span><a href="">欢迎登录</a></span>
+                            <p>登录游戏后查看战绩</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav-2">
+                    <div id="ul-inner">
+                        <ul>
+                            <li>&nbsp;</li>
+                            <li>
+                                <a href="#">版本介绍</a>
+                                <a href="#">游戏介绍</a>
+                                <a href="#">英雄资料</a>
+                                <a href="#"><i class="li_bg"></i>爆料站</a>
+                                <a href="#"><i class="li_bg"></i>故事站</a>
+                                <a href="#">游戏壁纸</a>
+                                <a href="#"><i class="li_bg"></i>模拟战资料库</a>
+                            </li>
+                            <li>
+                                <a href="#">攻略中心</a>
+                                <a href="#">英雄攻略</a>
+                                <a href="#">视频中心</a>
+                                <a href="#"><i class="li_bg"></i>开放素材库</a>
+                                <a href="#"><i class="li_bg"></i>王者视角</a>
+                                <a href="#"><i class="li_bg"></i>作者入驻</a>
+                                <a href="#">媒体入驻</a>
+                            </li>
+                            <li>
+                                <a href="#">冬季冠军杯</a>
+                                <a href="#">KPL</a>
+                                <a href="#"><i class="li_bg"></i>模拟战冬冠</a>
+                                <a href="#">KPLGT</a>
+                                <a href="#">高校赛</a>
+                                <a href="#">城市赛</a>
+                                <a href="#">全民赛</a>
+                                <a href="#"><i class="li_bg"></i>赛事数据</a>
+                            </li>
+                            <li>
+                                <a href="#">荣耀·传承</a>
+                                <a href="#">王者文化站</a>
+                                <a href="#">王者音乐听</a>
+                                <a href="#">万千世界</a>
+                                <a href="#">星光殿堂</a>
+                                <a href="#">商户特权</a>
+                                <a href="#"><i class="li_bg"></i>无限王者团</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="li_bg"></i>创意互动营</a>
+                                <a href="#"><i class="li_bg3"></i>王者营地</a>
+                                <a href="#">手Q部落</a>
+                                <a href="#">微信圈子</a>
+                                <a href="#">官方微博</a>
+                                <a href="#">微信公众号</a>
+                                <a href="#">手Q订阅号</a>
+                                <a href="#">同人社区</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="li_bg2"></i>成长守护平台</a>
+                                <a href="#"><i class="li_bg1"></i>健康系统</a>
+                                <a href="#"><i class="li_bg"></i>对局环境情报站</a>
+                                <a href="#">客服专区</a>
+                                <a href="#">礼包兑换</a>
+                                <a href="#">自助服务</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="coming.html" title="查看详情"></a>
+        <div id="header">
+            <ul>
+                <li class="header-li1">
+                    <a href="#"></a>
+                </li>
+                <li class="header-li2">
+                    <a href=""></a>
+                    <div id="header_image">
+                        <img src="images/7372f9cf0c8b1c66eec8cb33fd2cdb37.jpg">
+                    </div>
+                </li>
+                <li class="right_li">
+                    <h3 class="chengzhang_bg right_h3"><a href="">成长守护平台</a></h3>
+                    <h3 class="youxi_bj right_h3" id="pai_h3">
+                        <a href="">腾讯游戏排行榜</a>
+                        <div id="paihangbang">
+                            <div id="pai_parent">
+                                <div id="pai_left" class="pai">
+                                    <h3 class="title">新品端游排行榜</h3>
+                                    <ul>
+                                        <li class="pai_li" style="height: 90px;">
+                                            <p class="pai_p" style="display: none;">FLFA OL4</p>
+                                            <div class="pai_show" style="display: block;">
+                                                <img src="images/20191120202505-454519.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">1</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">nba2ks</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120202737-294976.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">2</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">冒险岛2</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120202810-141360.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">3</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">流放之路</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120202858-673749.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">4</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">穿越火线</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120202955-681017.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">5</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">极品飞车 online</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120203032-752393.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">6</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">炫舞</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120203106-118547.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">7</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">御龙在天</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120203230-364868.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">8</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">使命召唤</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120203307-979066.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">9</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="pai_content" class="pai">
+                                    <h3 class="title">热门端游排行榜</h3>
+                                    <ul>
+                                        <li class="pai_li" style="height: 90px;">
+                                            <p class="pai_p" style="display: none;">英雄联盟OL</p>
+                                            <div class="pai_show" style="display: block;">
+                                                <img src="images/20191218150448-940180.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">1</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">穿越火线</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191206174440-880655.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">2</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">DNF</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191211111843-528702.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">3</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">天涯明月刀</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191206174544-494677.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">4</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">炫舞</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20200213115823-299447.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">5</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">使命召唤OL</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120203307-979066.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">6</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">FLFA OL3</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120195048-522808.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">7</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">逆战</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120195946-581113.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">8</span>
+                                        </li>
+                                        <li class="pai_li">
+                                            <p class="pai_p">nba2ks</p>
+                                            <div class="pai_show" style="display: none;">
+                                                <img src="images/20191120202737-294976.jpg" width="200" height="92">
+                                                <div class="pai_bottom_posn">
+                                                    <a class="span_left pai_bottom_a">
+                                                        进入官网
+                                                    </a>
+                                                    <a class="span_right pai_bottom_a">
+                                                        下载游戏
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <span class="pai_span">9</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="pai_right" class="pai">
+                                    <div id="pai_right_top">
+                                        <h3 class="title">新品手游排行榜</h3>
+                                        <ul class="color_paiming">
+                                            <li class="pai_li" style="height: 90px;">
+                                                <p class="pai_p" style="display: none;">雪雁领主手游</p>
+                                                <div class="pai_show" style="display: block;">
+                                                    <img src="images/20191218153132-210218.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">1</span>
+                                            </li>
+                                            <li class="pai_li" style="height: 16px;">
+                                                <p class="pai_p" style="display: block;">猎人手游</p>
+                                                <div class="pai_show" style="display: none;">
+                                                    <img src="images/20191204115003-539627.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">2</span>
+                                            </li>
+                                            <li class="pai_li" style="height: 16px;">
+                                                <p class="pai_p" style="display: block;">狐妖小红娘</p>
+                                                <div class="pai_show" style="display: none;">
+                                                    <img src="images/20191129182736-522913.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">3</span>
+                                            </li>
+                                            <li class="pai_li" style="height: 16px;">
+                                                <p class="pai_p" style="display: block;">龙珠最强之战</p>
+                                                <div class="pai_show" style="display: none;">
+                                                    <img src="images/20191119172818-355997.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">4</span>
+                                            </li>
+                                            <li class="pai_li" style="height: 16px;">
+                                                <p class="pai_p" style="display: block;">多多自走棋</p>
+                                                <div class="pai_show" style="display: none;">
+                                                    <img src="images/20191119173939-424857.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">5</span>
+                                            </li>
+                                        </ul>
+                                        <h3 class="title" style="margin-bottom: 5px;">热门手游排行榜</h3>
+                                        <ul class="color_paiming1">
+                                            <li class="pai_li" style="height: 16px;">
+                                                <p class="pai_p" style="display: block;">王者荣耀</p>
+                                                <div class="pai_show" style="display: none;">
+                                                    <img src="images/20191120191344-555908.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">1</span>
+                                            </li>
+                                            <li class="pai_li" style="height: 16px;">
+                                                <p class="pai_p" style="display: block;">和平精英</p>
+                                                <div class="pai_show" style="display: none;">
+                                                    <img src="images/20191129182841-480452.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">2</span>
+                                            </li>
+                                            <li class="pai_li" style="height: 16px;">
+                                                <p class="pai_p" style="display: block;">穿越火线：枪战王者</p>
+                                                <div class="pai_show" style="display: none;">
+                                                    <img src="images/20191129183301-539627.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">3</span>
+                                            </li>
+                                            <li class="pai_li" style="height: 16px;">
+                                                <p class="pai_p" style="display: block;">龙族幻想</p>
+                                                <div class="pai_show" style="display: none;">
+                                                    <img src="images/20191120192630-568763.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">4</span>
+                                            </li>
+                                            <li class="pai_li" style="height: 16px;">
+                                                <p class="pai_p" style="display: block;">三国群英传-霸王之业</p>
+                                                <div class="pai_show" style="display: none;">
+                                                    <img src="images/20191129183201-834392.jpg" width="200" height="92">
+                                                    <div class="pai_bottom_posn">
+                                                        <a class="span_left pai_bottom_a">
+                                                            进入官网
+                                                        </a>
+                                                        <div class="pai_div_xiazai">
+                                                            <span class="pai_div_xiazai_span">下载游戏</span>
+                                                            <div class="pai_xia-a">
+                                                                <a href="" class="anzhuo_xiazai"></a>
+                                                                <a href="" class="ios_xiazai"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="pai_span">5</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                </li>
+            </ul>
+        </div>
+        <div id="hero_poli">
+            <div id="poli_left">
+                <p id="title">
+                    周免英雄（6月1号-6月8号）
+                </p>
+                <ul id="FreeHeros" style="margin-top: 8px;">
+                    <li class="active">
+                        <a href="">
+                            <img class="small" src="./images/114.jpg" alt="">
+                            <img class="lager" src="./images/114-freehover.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="small" src="./images/121.jpg" alt="">
+                            <img class="lager" src="./images/121-freehover.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="small" src="./images/139.jpg" alt="">
+                            <img class="lager" src="./images/139-freehover.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="small" src="./images/144.jpg" alt="">
+                            <img class="lager" src="./images/144-freehover.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="small" src="./images/153.jpg" alt="">
+                            <img class="lager" src="./images/153-freehover.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="small" src="./images/169.jpg" alt="">
+                            <img class="lager" src="./images/169-freehover.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="small" src="./images/176.jpg" alt="">
+                            <img class="lager" src="./images/176-freehover.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="more_hreo">
+                    更多英雄
+                </div>
+            </div>
+            <div id="poli_right">
+                <a href="" class="login">
+                    <img src="./images/avatar1.jpg" alt="">
+                    <span id="lv">0</span>
+                </a>
+                <div>
+                    <p>
+                        亲爱的召唤师，欢迎
+                        <a href="#">登录</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="hero_content">
+            <div id="hero_main">
+                <div id="content_title">
+                    <p>
+                        <span></span>
+                        <a href="index.html">
+                            王者荣耀首页
+                        </a>
+                        <i class="title_mar">></i>
+                        <a href="">
+                            英雄介绍
+                        </a>
+                    </p>
+                </div>
+                <h1 class="hero_header">英雄介绍</h1>
+                <ul class="herolist_nav">
+                    <li class="hero_active">
+                        <a href="herolist.html">英雄</a></li>
+                    <li>
+                        <a href="item.html">局内道具</a></li>
+                    <li>
+                        <a href="summoner.html">召唤师技能</a></li>
+                </ul>
+                <div id="hero_list">
+                    <div id="hero_top">
+                        <ul id="hero_left">
+                            <li>综合</li>
+                            <li>定位</li>
+                        </ul>
+                        <ul id="select_top" class="free_hero">
+                            <li>
+                                <span><i></i></span>
+                                本周免费
+                            </li>
+                            <li>
+                                <span><i></i></span>
+                                新手推荐
+                            </li>
+                        </ul>
+                        <ul id="select_zhiye" class="free_hero">
+                            <li class="radio">
+                                <span><i></i></span>
+                                全部
+                            </li>
+                            <li>
+                                <span><i></i></span>
+                                坦克
+                            </li>
+                            <li>
+                                <span><i></i></span>
+                                战士
+                            </li>
+                            <li>
+                                <span><i></i></span>
+                                刺客
+                            </li>
+                            <li>
+                                <span><i></i></span>
+                                法师
+                            </li>
+                            <li>
+                                <span><i></i></span>
+                                射手
+                            </li>
+                            <li>
+                                <span><i></i></span>
+                                辅助
+                            </li>
+                        </ul>
+                        <div id="hero_serch">
+                            <input type="text" value="输入想要搜索的英雄名">
+                            <a href=""></a>
+                        </div>
+                    </div>
+                    <div id="hero_int">
+                        <ul>
+                            <!-- <li><a href=""><img src="./images/105.jpg" alt="">廉颇</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" style="background: url(images/bg_footer.jpg) no-repeat;">
+            <div id="foot_main">
+                <div id="logo" style="width:1180px;overflow: hidden;">
+                    <a href="" class="logo1"></a>
+                    <a href="" class="logo2"></a>
+                </div>
+                <hr>
+                <div id="footer_bottom">
+                    <div id="footer_left" class="fl">
+                        <ul>
+                            <li>抵制不良游戏</li>
+                            <li>拒绝盗版游戏</li>
+                            <li>注意自我保护</li>
+                            <li>谨防受骗上当</li>
+                            <li>适度游戏益脑</li>
+                            <li>沉迷游戏伤身</li>
+                            <li>合理安排时间</li>
+                            <li>享受健康生活</li>
+                        </ul>
+                        <p>《王者荣耀》全部背景故事发生于架空世界“王者大陆”中。相关人物、地理、事件均为艺术创作，并非正史。若因观看王者故事对相关历史人物产生兴趣，建议查阅正史记载。</p>
+                    </div>
+                    <div id="footer_right" class="fr">
+                        <ul>
+                            <li>腾讯互动娱乐&nbsp;&nbsp;|&nbsp;&nbsp;服务条款&nbsp;&nbsp;|&nbsp;&nbsp;隐私政策&nbsp;&nbsp;|&nbsp;&nbsp;腾讯游戏招聘&nbsp;&nbsp;|&nbsp;&nbsp;腾讯游戏客服&nbsp;&nbsp;|&nbsp;&nbsp;游戏地图&nbsp;&nbsp;|&nbsp;&nbsp;商务合作&nbsp;&nbsp;|&nbsp;&nbsp;腾讯网&nbsp;&nbsp;|&nbsp;&nbsp;网站导航
+                            </li>
+                            <li>COPYRIGHT ? 1998 - 2018 TENCENT. ALL RIGHTS RESERVED<span>腾讯公司版权所有</span></li>
+                            <li>粤网文[2017]6138-1456号|新出网证（粤）字010号</li>
+                            <li>文网游备字[2016]M-CSG 0059号|新广出审[2017] 6712号|ISBN 978-7-7979-8408-9</li>
+                            <li>全国文化市场统一举报电话：12318</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <iframe src="footer.html" width="1200px" height="362px" frameborder="0" margin: 0 auto;></iframe> -->
+        </div>
+</body>
+
+</html>

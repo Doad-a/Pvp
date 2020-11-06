@@ -1,0 +1,71 @@
+@charset "utf-8";
+		#item_int{
+		    margin-top: 40px;
+		}
+		#item_int ul{
+			margin-right: -50px;
+			overflow: hidden;
+		}
+		#item_int ul li{
+		    float: left;
+		    width: 87px;
+		    margin-bottom: 34px;
+		    margin-right: 30px;
+		}
+		#item_int ul li a{
+		    display: block;
+		    width: 100%;
+		    text-align: center;
+		}
+		#item_int ul li img{
+		    width: 83px;
+		    height: 83px;
+		}
+		#item_wuqi{
+			/* display: none; */
+			position: absolute;
+			top: 20%;
+			left: 20%;
+			background: rgba(0, 0, 0, .9);
+			opacity: 0.9;
+			border: 1px solid #459ef4;
+			width: 213px;
+			padding: 24px 15px 24px 33px;
+			z-index: 100;
+		}
+		.show_top img{
+			width: 73px;
+			height: 73px;
+			float: left;
+			margin-right: 15PX;
+		}
+		#wuqi_jiage{
+			float: left;
+			margin-left: 6px;
+			margin-bottom: 15px;
+		}
+		#wuqi_jiage h4{
+			font-size: 18px;
+			font-weight: bold;
+		    color: #23ff28;
+		    line-height: 26px;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    width: 118px;
+		}
+		#wuqi_jiage P{
+			font-size: 14px;
+			color: #da951c;
+		    line-height: 30px;
+		}
+		#wuqi_des1{
+			color: #369ff9;
+			font-size: 14px;
+			line-height: 22px;
+		}
+		#wuqi_des2{
+			color: #369ff9;
+			font-size: 14px;
+			line-height: 22px;
+		}
